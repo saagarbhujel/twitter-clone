@@ -1,5 +1,5 @@
 import Home from "./Home/Home";
-import Navbar from "./Components/NavBar";
+import Navbar from "./Components/Navbar";
 import { Router, BrowserRouter, Routes, Route } from "react-router-dom";
 import SIngleTweet from "./Home/SIngleTweet";
 import About from "./Components/About";
