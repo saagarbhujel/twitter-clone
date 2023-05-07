@@ -10,14 +10,20 @@ const WriteTweets =({setShouldRefresh})=> {
 
     const upload = async ()=>{
        try {
-         await axios.post("https://react-workshop.fly.dev/",{
-            authorname: "Saagar Bhujel",
-            avatar:"9",
-            content:tweetContent,
-             image: imageUrl
-
-
-          });
+         await axios.post(
+           "https://react-workshop-todo.fly.dev/posts/",
+           {
+             //  authorname: "Saagar Bhujel",
+             //  avatar: "9",
+             content: tweetContent,
+             image: imageUrl,
+           },
+           {
+             headers: {
+               apiKey: "645666987213f63d43086426",
+             },
+           }
+         );
           setTweetContent("")
           setImageUrl("")
           setShouldRefresh((v)=>!v)
