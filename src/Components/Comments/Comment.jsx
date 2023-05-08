@@ -2,10 +2,10 @@ import React from 'react'
 
 import CommentBody from './CommentBody'
 
-const Comment = ({name,comment,username}) => {
+const Comment = ({name,comment,username,_id}) => {
   return (
     <>
-    <CommentBody name={name} comment={comment} username={username} />
+    <CommentBody name={name} comment={comment} username={username} id={_id} />
     </>
   )
 }

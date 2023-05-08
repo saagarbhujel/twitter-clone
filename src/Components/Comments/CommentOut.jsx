@@ -30,7 +30,7 @@ const CommentOut = ({id}) => {
         <CommentInput/>
 
       {outCmnt.map((data) => {
-        return <Comment name={data.user.fullname} username={data.user.name} comment={data.content}key={data._id} />;
+        return <Comment name={data.user.fullname} username={data.user.name} comment={data.content} key={data._id} />;
       })}
     </>
   );

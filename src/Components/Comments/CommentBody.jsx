@@ -2,14 +2,30 @@ import React from 'react'
 
 
 import  "./Commentbody.css"
-const CommentBody = ({name, username,comment}) => {
+import axios from 'axios'
+const CommentBody = ({name, username,comment,_id}) => {
+  
+
+  
+  
+  const deleteCmnt = async()=>{
+   
+   try {
+    await axios.delete(`https://react-workshop-todo.fly.dev/posts/${_id}`,{
+      headers: {
+        apiKey: "645666987213f63d43086426",
+      },
+      
+    })
+   } catch (error) {
+     console.log(error)
+    
+   }
+  }
+  
+  
+  
   return (
-
-
-
-
-
-
    <>
   <div className='comments'>
   <div className='cmnt-list'>
@@ -21,7 +37,7 @@ const CommentBody = ({name, username,comment}) => {
    <div className='cmnt-data'>
    <p>{comment}</p>
    </div>
-   <button className='deleteBtn'>Delete</button>
+   <button className='deleteBtn' onClick={deleteCmnt}>Delete</button>
   </div>
    <hr />
   

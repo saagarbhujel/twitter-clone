@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 
 
-const CommentInput = () => {
+const CommentInput = ({}) => {
     const [commentInpt, setCommentInpt] = useState("")
     const { id } = useParams();
 
@@ -21,6 +21,7 @@ const CommentInput = () => {
         await axios.post(`https://react-workshop-todo.fly.dev/posts/${id}/comments`,
         {
             content: commentInpt
+
         },{
             headers:{
                 apiKey: "645666987213f63d43086426",
