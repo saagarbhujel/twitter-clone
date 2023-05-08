@@ -3,10 +3,12 @@ import Tweet from "../Components/Tweet";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+import CommentOut from "../Components/Comments/CommentOut";
+
 const SIngleTweet = () => {
   const [tweet, setTweet] = useState(null);
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   const fetchApi = async () => {
     const resp = await axios.get(
       `https://react-workshop-todo.fly.dev/posts/${id}`,
@@ -35,6 +37,7 @@ const SIngleTweet = () => {
           avatar={`https://avatars.githubusercontent.com/u/${tweet?.user?.githubId}`}
         />
       ) : null}
+      <CommentOut id={id} name={name}/>
     </>
   );
 };
