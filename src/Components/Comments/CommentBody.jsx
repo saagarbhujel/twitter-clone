@@ -8,21 +8,21 @@ const CommentBody = ({name, username,comment,_id,setShouldRefresh}) => {
 
   
   
-  const deleteCmnt = async()=>{
+  // const deleteCmnt = async()=>{
    
-   try {
-    await axios.delete(`https://react-workshop-todo.fly.dev/posts/${_id}`,{
-      headers: {
-        apiKey: "645666987213f63d43086426",
-      },
+  //  try {
+  //   await axios.delete(`https://react-workshop-todo.fly.dev/posts/${_id}`,{
+  //     headers: {
+  //       apiKey: "645666987213f63d43086426",
+  //     },
       
-    })
-    setShouldRefresh((v) => !v);
-   } catch (error) {
-     console.log(error)
+  //   })
+  //   setShouldRefresh((v) => !v);
+  //  } catch (error) {
+  //    console.log(error)
     
-   }
-  }
+  //  }
+  // }
   
   
   
@@ -38,7 +38,7 @@ const CommentBody = ({name, username,comment,_id,setShouldRefresh}) => {
    <div className='cmnt-data'>
    <p>{comment}</p>
    </div>
-   <button className='deleteBtn' onClick={deleteCmnt}>Delete</button>
+   {/* <button className='deleteBtn' onClick={deleteCmnt}>Delete</button> */}
   </div>
    <hr />
   
