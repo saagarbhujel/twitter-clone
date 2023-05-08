@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 
 
-const CommentInput = ({}) => {
+const CommentInput = ({setShouldRefresh}) => {
     const [commentInpt, setCommentInpt] = useState("")
     const { id } = useParams();
 
@@ -29,6 +29,7 @@ const CommentInput = ({}) => {
         }
         )
         setCommentInpt("");
+        setShouldRefresh((v) => !v);
      } catch (error) {
         console.log(error)
      }

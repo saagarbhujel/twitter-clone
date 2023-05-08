@@ -3,7 +3,7 @@ import React from 'react'
 
 import  "./Commentbody.css"
 import axios from 'axios'
-const CommentBody = ({name, username,comment,_id}) => {
+const CommentBody = ({name, username,comment,_id,setShouldRefresh}) => {
   
 
   
@@ -17,6 +17,7 @@ const CommentBody = ({name, username,comment,_id}) => {
       },
       
     })
+    setShouldRefresh((v) => !v);
    } catch (error) {
      console.log(error)
     

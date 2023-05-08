@@ -38,7 +38,7 @@ const SIngleTweet = () => {
           avatar={`https://avatars.githubusercontent.com/u/${tweet?.user?.githubId}`}
         />
       ) : null}
-      <CommentOut id={id} name={name}/>
+      <CommentOut id={id}  />
     </>
   );
 };

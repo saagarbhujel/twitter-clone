@@ -8,6 +8,9 @@ import Comment from "./Comment";
 
 const CommentOut = ({id}) => {
   const [outCmnt, setOutCmnt] = useState([]);
+  const [shouldRefresh, setShouldRefresh] = useState([]);
+
+  
 
   const fetchInput = async () => {
     const postData = await axios.get(
@@ -24,13 +27,13 @@ const CommentOut = ({id}) => {
   useEffect(() => {
     fetchInput();
     // console.log(postData.data.content)
-  }, []);
+  }, [shouldRefresh]);
   return (
     <>
-        <CommentInput/>
+        <CommentInput setShouldRefresh={setShouldRefresh}/>
 
       {outCmnt.map((data) => {
-        return <Comment name={data.user.fullname} username={data.user.name} comment={data.content} key={data._id} />;
+        return <Comment name={data.user.fullname} username={data.user.name} comment={data.content} key={data._id} setShouldRefresh={setShouldRefresh} />;
       })}
     </>
   );
