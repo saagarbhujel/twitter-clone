@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./tweet.css"
 
 
 const WriteTweets =({setShouldRefresh})=> {

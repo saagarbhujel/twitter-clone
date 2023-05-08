@@ -1,0 +1,48 @@
+.cmnt-list{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    
+    margin: 5px 0 0 0;
+    text-align: initial;
+        height: 45px;
+}
+
+.comments {
+  font-size: 18px;
+  margin: 15px 0;
+
+    /* background-color: gray; */
+    /* width: 100%; */
+    /* width: 64.5vw; */
+    padding: 5px 10px;
+}
+
+.deleteBtn {
+  border-radius: 8px;
+  border: 1px solid red;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+
+
+p{
+  color: rgb(0, 0, 0);
+  /* border-radius: 5px; */
+}
+
+.cmnt-data{
+    text-align: left;
+    margin: 5px 0 35px 5px;
+}
+
+.username-cmt{
+    color: gray;
+    font-size: 16px;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Tweet from "../Components/Tweet";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "../Components/tweet.css"
 
 import CommentOut from "../Components/Comments/CommentOut";
 

@@ -2,6 +2,7 @@ import Header from "./Header";
 import TweetBody from "./TweetBody";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import "./tweet.css"
 
 const Tweet = (props) => {
   return (
