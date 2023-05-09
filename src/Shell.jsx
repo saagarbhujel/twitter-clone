@@ -1,8 +1,9 @@
 import Home from "./Home/Home";
 import Navbar from "./Components/Navbar";
-import { Router, BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SIngleTweet from "./Home/SIngleTweet";
-import About from "./Components/About";
+import About from "./Home/About";
+import Profile from "./Components/Profile/Profile"
 
 const Shell = () => {
   return (
@@ -10,9 +11,10 @@ const Shell = () => {
       <Navbar />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />}></Route>
-          <Route path="/About" element={<About />}></Route>
+          <Route exact path="/" index element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
           <Route path="/tweet/:id" element={<SIngleTweet />}></Route>
+          <Route path="/tweet/profile/:id" element={<Profile/>}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -40,6 +40,7 @@ const Home = () => {
             id={tweet._id}
             key={tweet._id}
             userName={tweet.user.name}
+            userId={tweet.user._id}
             img={tweet.image}
             tweet={tweet.content}
             avatar={`https://avatars.githubusercontent.com/u/${tweet.user.githubId}`}
