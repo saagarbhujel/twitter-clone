@@ -18,6 +18,8 @@ const Footer = () => {
       <button className="btn-retweet">Retweet</button>
       <button className="btn-like" onClick={toggle} >{count} Like</button>
       <button className="btn-share">Share</button>
+      
+      
     </div>
   );
 };

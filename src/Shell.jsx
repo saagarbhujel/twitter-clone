@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SIngleTweet from "./Home/SIngleTweet";
 import About from "./Home/About";
 import Profile from "./Components/Profile/Profile"
+import Update from "./Components/Update";
+
 
 const Shell = () => {
   return (
@@ -15,7 +17,9 @@ const Shell = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/tweet/:id" element={<SIngleTweet />}></Route>
           <Route path="/tweet/profile/:id" element={<Profile/>}></Route>
+          <Route path="/tweet/update/:id" element={<Update/>}></Route>
         </Routes>
+        
       </BrowserRouter>
     </>
   );
