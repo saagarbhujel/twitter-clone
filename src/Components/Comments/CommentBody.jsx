@@ -2,8 +2,8 @@ import React from 'react'
 
 
 import  "./Commentbody.css"
-import axios from 'axios'
-const CommentBody = ({name, username,comment,_id,setShouldRefresh}) => {
+// import axios from 'axios'
+const CommentBody = ({name, username,comment,avatar,_id,setShouldRefresh}) => {
   
 
   
@@ -27,23 +27,20 @@ const CommentBody = ({name, username,comment,_id,setShouldRefresh}) => {
   
   
   return (
-   <>
-  <div className='comments'>
-  <div className='cmnt-list'>
-   
-   <h4>{name}</h4> <p className='username-cmt'>@{username}</p>
-    
-    
-   </div>
-   <div className='cmnt-data'>
-   <p>{comment}</p>
-   </div>
-   {/* <button className='deleteBtn' onClick={deleteCmnt}>Delete</button> */}
-  </div>
-   <hr />
-  
-   </>
-  )
+    <>
+      <div className="comments">
+        <div className="cmnt-list">
+          <img src={avatar} alt={name} height={40} width={40} />
+          <h4>{name}</h4> <p className="username-cmt">@{username}</p>
+        </div>
+        <div className="cmnt-data">
+          <p>{comment}</p>
+        </div>
+        {/* <button className='deleteBtn' onClick={deleteCmnt}>Delete</button> */}
+      </div>
+      <hr />
+    </>
+  );
 }
 
 export default CommentBody

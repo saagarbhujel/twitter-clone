@@ -2,10 +2,11 @@ import React from 'react'
 
 import CommentBody from './CommentBody'
 
-const Comment = ({name,comment,username,_id,setShouldRefresh}) => {
+const Comment = ({name,comment,username,avatar,_id,setShouldRefresh}) => {
   return (
     <>
-    <CommentBody name={name} comment={comment} username={username} id={_id} setShouldRefresh={setShouldRefresh} />
+    
+    <CommentBody name={name} comment={comment} username={username} avatar={avatar} id={_id} setShouldRefresh={setShouldRefresh} />
     </>
   )
 }

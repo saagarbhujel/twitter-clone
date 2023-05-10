@@ -35,7 +35,7 @@ const Profile = () => {
                      key={data._id}
                      id={data._id}
                      userName={data.user.name}
-                     img={data.user.image}
+                     img={data.image}
                      tweet={data.tweet}
                      avatar={`https://avatars.githubusercontent.com/u/${data.user.githubId}`}
                     />

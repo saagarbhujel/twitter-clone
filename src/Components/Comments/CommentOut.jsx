@@ -6,7 +6,7 @@ import axios from "axios";
 
 import Comment from "./Comment";
 
-const CommentOut = ({id}) => {
+const CommentOut = ({_id}) => {
   const [outCmnt, setOutCmnt] = useState([]);
   const [shouldRefresh, setShouldRefresh] = useState([]);
 
@@ -14,7 +14,7 @@ const CommentOut = ({id}) => {
 
   const fetchInput = async () => {
     const postData = await axios.get(
-      `https://react-workshop-todo.fly.dev/posts/${id}`,
+      `https://react-workshop-todo.fly.dev/posts/${_id}`,
       {
         headers: {
           apiKey: "645666987213f63d43086426",
@@ -33,7 +33,16 @@ const CommentOut = ({id}) => {
         <CommentInput setShouldRefresh={setShouldRefresh}/>
 
       {outCmnt.map((data) => {
-        return <Comment name={data.user.fullname} username={data.user.name} comment={data.content} key={data._id} setShouldRefresh={setShouldRefresh} />;
+        return (
+          <Comment
+            name={data.user.fullname}
+            username={data.user.name}
+            comment={data.content}
+            avatar={`https://avatars.githubusercontent.com/u/${data.user.githubId}`}
+            key={data._id}
+            setShouldRefresh={setShouldRefresh}
+          />
+        );
       })}
     </>
   );
